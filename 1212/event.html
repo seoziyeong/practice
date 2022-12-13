@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 인라인 핸들러
+        function myHandler() {
+            alert('WOW!!');
+        }
+    </script>
+</head>
+<body>
+    <button onclick="myHandler()">나는 인라인 핸들러!</button>
+
+    <button class="btn">나는 프로퍼티 핸들러!</button>
+    <script> // 프로퍼티 핸들러. 얘는 DOM이라서 head에 넣으면 동작을 안하네
+        const btn = document.querySelector('.btn');
+        btn.onclick = function() {
+            alert('GOOD! 1');
+        }
+        btn.onclick = function() {  // 나중에 바인딩된 함수가 실행 됨
+            alert('GOOD! 2');
+        }
+    </script>
+
+    <input type="text">
+    <script> // 이벤트 리스너
+        const input = document.querySelector('input[type=text]');
+        input.addEventListener('change', function() {
+            alert('값을 입력했네요!');
+        })
+    </script>
+
+</body>
+</html>

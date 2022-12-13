@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            color: red;
+        }
+
+        .blue {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cities</h1>
+    <ul>
+        <li id="one" class="red">Seoul</li>
+        <li id="two" class="red">London</li>
+        <li id="three" class="red">Newyork</li>
+        <li id="four">Tokyo</li>
+    </ul>
+    <script>
+        // const elem = document.getElementById('one');  // id가 one인 li 선택
+        // const elem = document.querySelector('li.red');    // li 중 제일 첫 번째 선택
+        // elem.className = 'blue';
+        // console.log('elem');
+        
+        const elem = document.getElementsByClassName('red');    // live. 틀이 계속 바뀌게 된다 (red->blue로 되면 걔가 배열에서 빠져버리게 됨)
+        for (let i = 0 ; i < elem.length ; i++) {
+            elem[i].className = 'blue';
+        }
+        
+        // const elem = document.getElementsByTagName('li');    // live
+        // for (let i = 0 ; i < elem.length ; i++) {
+        //     elem[i].className = 'blue';
+        // }
+        
+        // const elem = document.querySelectorAll('li.red');    // non-live
+        // for (let i = 0 ; i < elem.length ; i++) {
+        //     elem[i].className = 'blue';
+        // }
+
+        // const one = document.getElementById('one');   // id로 선택해서 안의 value 바꾸기
+        // const textNode = one.firstChild;
+        // textNode.nodeValue = 'Pusan';
+    </script>
+</body>
+</html>
