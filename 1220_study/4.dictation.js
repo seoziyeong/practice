@@ -24,19 +24,3 @@ rl.on("line", function(t) {
 
   process.exit();
 });
-
-
-
-
-// 2 6
-// AB
-// AAABAA
-
-// 2 - AB length  / 6 - AAA-BAA length
-// AB가 AAABAA에 포함이 되어잇으면 1, 없으면 0
-
-// var str = "javascript"
-// substr = "java"
-// str.indexOf(substr) !== -1;
-
-// str.indexOf(substr)이게 인덱스가 나오는건데.. if문 조건으로 쓸수 잇을듓???ㄴ
